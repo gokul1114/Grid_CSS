@@ -1,0 +1,75 @@
+.container{
+    display: grid;
+    background-color: grey;
+    grid-template-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(150px, auto);
+    grid-template-columns: 200px 300px;
+    /* grid-template-columns: 1fr 2fr; */
+   /* grid-row-gap: 10px;
+   grid-column-gap: 20px; */
+   grid-gap: 10px;
+   justify-content: center;
+   /* grid-template-areas: 
+   "header header"
+   "content side"; */
+/* 
+   Important
+    fluid columns that can make dynamically as many clumns as possible based on the available space ;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     */
+    
+}
+
+.item{
+    border : 1px solid black;
+    border-collapse: collapse;
+    background-color: yellow;
+}
+
+.item-1{
+    /* grid-area: 1 / 1 / 2 / 3; */
+   /* grid-area : header; */
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+.item-2{
+    /* grid-area: 1 / 1 / 2 / 3; */
+    /* grid-area : content */
+    grid-row : 2 / 5;
+} 
+.item-3 {
+    grid-row : span 2
+}
+
+
+
+/* STYLING SUB GRID  */
+.main-grid{
+    display: grid;
+    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: repeat(3,minmax(80px, auto));
+    justify-content: center;
+    background-color: yellow;
+    gap : 10px;
+}
+
+.grid-item{
+    background-color: grey;
+    color : white;
+    border : 1px solid black;
+    
+}
+
+.e{
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-auto-rows: 80px;
+    gap : 10px;
+    /* background-color: violet; */
+}
+
+
+.grid-item .grid-item{
+    background-color: red;
+    color: white;
+}
